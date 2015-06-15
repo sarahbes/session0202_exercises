@@ -1,0 +1,12 @@
+ header {
+      text-align: center;
+      background: url('http://i.imgur.com/Nmabj0z.jpg');
+      background-size: cover;
+      color: black;
+    }
+ body {
+	text-align: center;
+	color: white;
+	background: rgb(0,200,100);
+	font-family: 'Londrina Shadow', cursive ;
+}
