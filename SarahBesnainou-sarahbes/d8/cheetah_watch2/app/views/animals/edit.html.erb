@@ -1,0 +1,36 @@
+<h1>Editing animal</h1>
+ 
+<%= form_for :animal, url: animal_path(@animal), method: :patch do |f| %>
+ 
+  <% if @animal.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@animal.errors.count, "error") %> prohibited
+        this animal from being saved:
+      </h2>
+      <ul>
+        <% @animal.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <div>
+    <%=f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div>
+    <%=f.label :region %>
+    <%= f.text_field :region %>
+  </div>
+
+  <div>
+    <%=f.label :life_expectancy %>
+    <%= f.text_field :life_expectancy %>
+  </div>
+ 
+<% end %>
+ 
+<%= link_to 'Back', animals_path %>
