@@ -1,4 +1,8 @@
 <h1><%= @animal.name %></h1>
+<p><%= Region: @animal.region %></p>
+<p><%= Life Expectancy: @animal.life_expectancy %></p>
+<p><%= Conservation: @animal.conservation_status %></p>
+<p><%= Rideable: @animal.rideable %></p>
 
 <%= link_to 'Edit', edit_animal_path(@animal) %> |
 <%= link_to 'Back', animals_path %>
