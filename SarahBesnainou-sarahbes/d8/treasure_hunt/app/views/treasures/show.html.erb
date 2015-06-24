@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Treasure</h1>
+
+<p>
+  <strong>Title:</strong>
+  <%= @treasure.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @treasure.description %>
+</p>
+
+<hr><br>
+
+<h2>Comments</h2>
+<%= render @treasure.comments %>
+
+<h2>Add a comment:</h2>
+<%= render 'comments/form' %>
+
+<%= link_to 'Edit', edit_treasure_path(@treasure) %> |
+<%= link_to 'Back', treasures_path %>

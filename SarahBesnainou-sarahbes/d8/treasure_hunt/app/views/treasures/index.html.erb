@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1><%= image_tag("treasure_map.png", width: '32', class: "logo") %>Treasure Hunt App</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @treasures.each do |treasure| %>
+      <tr>
+        <td><h2><%= link_to treasure.title, treasure %></h2></td>
+        <td><%= link_to 'Edit', edit_treasure_path(treasure) %></td>
+        <td><%= link_to 'Destroy', treasure, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<p><%= link_to 'New Treasure', new_treasure_path %></p>
+
+<p><%= link_to 'View GitHub', 'https://github.com/nax3t/Treasure-Hunt' %></p>
