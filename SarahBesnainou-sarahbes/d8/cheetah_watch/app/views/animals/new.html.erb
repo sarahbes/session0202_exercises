@@ -1,20 +1,4 @@
-<%= form_for @animal do |f| %>
+<h1> New Animal </h1>
 
-<div>
-	<%=f.label :name %>
-	<%= f.text_field :name %>
-</div>
-
-<div>
-	<%=f.label :region %>
-	<%= f.text_field :region %>
-</div>
-
-<div>
-	<%=f.label :life_expectancy %>
-	<%= f.text_field :life_expectancy %>
-</div>
-
-	<%= f.submit %>
-<% end %>
+<%= render 'form' %>
 

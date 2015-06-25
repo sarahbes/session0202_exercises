@@ -10,9 +10,12 @@ puts "Creating animals..."
 
 Animal.delete_all
 
-Animal.create! name: "Elephant", region: "India", life_expectancy: 70, 
-	conservation_status: "Endangered AF", rideable: true
-Animal.create! name: "Flamingo", region: "Stellenbbosch", life_expectancy: 49, 
-conservation_status: "Abundant", rideable: true
-Animal.create! name: "Shark", region: "Ocean", life_expectancy: 10000, 
-conservation_status: "Endangered AF", rideable: false
+Animal.create! name: "Elephant", region: "India", life_expectancy: 70, conservation_status: "Endangered AF", rideable: true
+Animal.create! name: "Flamingo", region: "Stellenbbosch", life_expectancy: 49, conservation_status: "Abundant", rideable: true
+Animal.create! name: "Shark", region: "Ocean", life_expectancy: 10000, conservation_status: "Endangered AF", rideable: false
+
+puts "Creating shelters..."
+
+Shelter.delete_all
+
+Shelter.create! name: "Heaven", location: "above"
